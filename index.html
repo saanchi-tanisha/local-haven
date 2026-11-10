@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Local Haven connects communities with local resources and volunteers">
+    <title>Local Haven|Community Support</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#home" class="logo">local<span>haven.</span></a>
+        <nav>
+            <a href="#home"> HOME </a>
+            <a href="#resources">RESOURCES</a>
+            <a href="#volunteer">VOLUNTEERS</a>
+            <a href="#help">GET HELP</a>
+        </nav>
+
+        <button id="voiceButton" class="voice-button" type="button">
+            Start Voice Command🎙️
+        </button>
+    </header>
+    <main>
+
+        <!--HOME-->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow"> A COMMUNITY THAT CARES MORE THAN YOU THINK</p>  
+                <h1> Small acts of kindness.<br>
+                    <span> Make a BIG difference.</span>
+                </h1>
+                <p>
+                    Everyone deserves a helping hand. 
+                    DIscover Local resources, request assistance or become someone else's reason to smile.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#resources" class="primary-button">
+                        Find Resources → → →
+                    </a>
+
+                    <a href="#help" class="secondary-button">
+                        RequestHelp → → →
+                    </a>
+
+                </div>
+
+                <p id="voiceStatus" class="voice-status"
+                    aria-live="polite">
+                    Voice assitant is ready to assist you.
+                </p>
+            </div
+
+            <div class="hero-art">
+                <div class="art-circle">🤝</div>
+                <div class="floating-note">
+                    ♡ Kindness connects us.
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCES -->
+        <section class="section" id="resources">
+            <div class="section-heading">
+                <p class="eyebrow"> FIND YOUR SUPPORT</p>
+            </div>
+
+            <div class="search-area">
+                <label for="resourceSearch">Search resources</label>
+                <input
+                type="text"
+                id="resourceSearch"
+                placeholder="Try food, education, shelter..."
+                >
+
+               <small id="resourceSearchError" class="error-message"></small>
+
+               <p id="searchFeedback" aria-live="polite"></p>
+            </div>
+
+            <div class="resource-grid">
+                <article class="resource-card" data-category="food">
+                    <span class="card-icon">🥗</span>
+                    <h3> Food Assistance</h3>
+                </article>
+
+                <article class="resource-card" data-category="education">
+                    <span class="card-icon">📚</span>
+                    <h3> Education Support</h3>
+                    <p> Explore learning and educational opportunities.</p>
+                </article>
+
+                <article class="resource-card" data-category="shelter">
+                    <span class="card-icon"🏠>
+                    </span>
+                    <h3> Shelter & Housing</h3>
+                    <p> Find temporary or long-term housing solutions.</p>
+                </article>
+
+                <article class="resource-card" data-category="community">
+                    <span class="card-icon">🍀</span>
+                    <h3> Community Resources</h3>
+                    <p> Connect with local support networks.</p>
+                </article>
+            </div>
+        </section>
+
+        <!--HELP REQUEST FORM-->
+        <section class="section form-section" id="help">
+            <div class="section-heading">
+                <p class="eyebrow"> You matter here</p>
+                <h2> Request Help</h2>
+                <p>Tell us a little about how we can help.</p>
+            </div>
+
+            <form id="helpForm" novalidate>
+                <div class="form-group">
+                    <label for="helpName">Your name</label>
+                    <input type="text" id="helpName"
+                        placeholder="Enter your name" required>
+                    <small class="error-message" id="helpNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="help Email">Email address</label>
+                    <input type="email" id="helpEmail"
+                        placeholder="you@example.com" required>
+                    <smaill class="error-message" id="helpEmailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="helpAge">Your age</label>
+                    <input type="number" id="helpAge"
+                        placeholder="Enter your age" min="1" max="120" required>
+                    <small class="error-message" id="helpAgeError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="helpDetails">What assistance do you need?</label>
+                    <textarea id="helpDetails" placeholder="Describe the help you're looking for..." required></textarea>
+                    <small class="error-message" id="helpDetailsError"></small>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Submit Help Request→ → →
+                </button>
+
+                <p id="helpFeedback" class="form-feedback"
+                    aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!--VOLUNTEER OPPORTUNITIES-->
+        <section class="section volunteer-section" id="volunteer">
+            <div class="section-heading">
+                <p class="eyebrow">BE the difference</p>
+                <h2>Volunteer Opportunities</h2>
+                <p>Join our community of volunteers in making an impact.</p>
+            </div>
+
+            <form id="volunteerForm" novalidate>
+                <div class="form-group">
+                    <label for="volunteerName">Your name</label>
+                    <input type="text" id="volunteerName"
+                        placeholder="Enter your name" required>
+                    <small class="error-message" id="volunteerNameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="volunteerEmail">Email address</label>
+                    <input type="email" id="volunteerEmail"
+                        placeholder="you@example.com" required>
+                    <small class="error-message" id="volunteerEmailError"></small>
+            </div>
+
+                <div class="form-group">
+                    <label for="volunteerHours">Hours available per week</label>
+                    <input type="number" id="volunteerHours"
+                        placeholder="For example,5" min="1" max="170" required>
+                    <small class="error-message" id="volunteerHoursError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="volunteerSkills">Your skills or interests</label>
+                    <textarea id="volunteerSkills"
+                     placeholder="Tell us how you would like to contribute" required></textarea>
+                    <small class="error-message" id="volunteerSkillsError"></small>
+                </div>
+
+                <button type="submit" class="primary-button">
+                    Register as Volunteer → → →
+                </button>
+
+                <p id="volunteerFeedback" class="form-feedback"
+                    aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">local<span>haven.</span></a>
+        <p> Building stronger communities, together.♡♡ </p>
+        <p class="copyright">© 2026 Local Haven</p>
+    </footer>
+
+</body>
+</html>
+
