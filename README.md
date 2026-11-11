@@ -26,7 +26,4 @@ Purpose
 To explore how accessible web technologies can help people discover community support and connect with volunteering opportunities.
 
 
-
-To explore how accessible web technologies can help people discover community support and connect with volunteering opportunities.
-
 Built with care. 💚
